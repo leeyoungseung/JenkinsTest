@@ -7,5 +7,14 @@ pipeline {
         echo 'Hello Jenkins'
       }
     }
+    stage('findHome') {
+      steps {
+        sh 'pwd'
+        sh 'ls -la'
+        sh '''pwd
+ls -la'''
+        sh 'cd ~'
+      }
+    }
   }
 }
