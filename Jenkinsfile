@@ -9,7 +9,7 @@ pipeline {
             echo 'Hello Jenkins'
           }
         }
-        stage('') {
+        stage('SecondHello') {
           steps {
             echo 'Hello Second Hello'
             sh 'ls -la'
