@@ -2,9 +2,19 @@ pipeline {
   agent any
   stages {
     stage('HelloJenkins') {
-      steps {
-        sh 'ls -la'
-        echo 'Hello Jenkins'
+      parallel {
+        stage('HelloJenkins') {
+          steps {
+            sh 'ls -la'
+            echo 'Hello Jenkins'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'Hello Second Hello'
+            sh 'ls -la'
+          }
+        }
       }
     }
     stage('findHome') {
