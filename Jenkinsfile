@@ -11,9 +11,10 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'ls -la'
-        sh 'cd /'
-        sh '''pwd
+        sh '''cd /
+pwd
 ls -la'''
+        sh 'ls -la /'
       }
     }
   }
