@@ -14,6 +14,8 @@ pipeline {
         sh '''pwd
 ls -la'''
         sh 'cd ~'
+        sh '''pwd
+ls -la'''
       }
     }
   }
